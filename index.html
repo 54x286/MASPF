@@ -105,12 +105,12 @@
     }
 
     .tracklist li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       border-bottom: 1px solid #eee;
       padding: 14px 0;
       transition: background 0.3s, transform 0.2s;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
     }
 
     .tracklist li:hover {
@@ -128,9 +128,22 @@
       font-size: 0.85rem;
     }
 
-    .tracklist span {
+    .track-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .track-words {
       font-size: 0.9rem;
       color: #444;
+    }
+
+    .track-pairing {
+      color: #ff7aa2;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 4px;
     }
 
     a {
@@ -163,8 +176,8 @@
       <div class="album-info">
         <h1>MARKERS AND SUCH PENS FLASHDISKS</h1>
         <h2>Sal Priadi</h2>
-        <p class="meta">AO3 · 2024 · <span>Collection</span></p>
-        <p class="desc">Each fic mirrors a track — words replace minutes, authors replace composers.</p>
+        <p class="meta">AO3 · Cintauniverse ·  <span>Collection</span></p>
+        <p class="desc">Each fic inspired by a tracks from the album.</p>
         <div class="buttons">
           <button class="play">Read</button>
           <button class="shuffle">Open Album</button>
@@ -174,21 +187,30 @@
 
     <section class="tracklist">
       <ol>
-        <li><div class="track-details"><a href="#">Kita usahakan rumah itu</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Mesra-mesraannya kecil-kecilan dulu</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Lewat sudah pukul dua, makin banyak bicara kita</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Dari planet lain</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Yasudah</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Episode</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Foto kita blur</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Semua lagu cinta</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Di mana alamatmu sekarang</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="https://archiveofourown.org/works/72100281" target="_blank">Ada titik-titik di ujung doa</a><span class="track-author">by Cupsociety</span></div><span>10,000 words</span></li>
-        <li><div class="track-details"><a href="#">Biar jadi urusanku</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Zuzuzaza</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Hi, selamat pagiii</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">Gala bunga matahari</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
-        <li><div class="track-details"><a href="#">I'd like to watch you sleeping</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Kita usahakan rumah itu</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Mesra-mesraannya kecil-kecilan dulu</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Lewat sudah pukul dua, makin banyak bicara kita</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Dari planet lain</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Yasudah</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Episode</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Foto kita blur</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Semua lagu cinta</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Di mana alamatmu sekarang</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li>
+          <div class="track-details">
+            <a href="https://archiveofourown.org/works/72100281" target="_blank">Ada titik-titik di ujung doa</a>
+            <span class="track-author">by Cupsociety</span>
+          </div>
+          <div class="track-meta">
+            <span class="track-words">10,000 words</span>
+            <span class="track-pairing">riku/yushi</span>
+          </div>
+        </li>
+        <li><div class="track-details"><a href="#">Biar jadi urusanku</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Zuzuzaza</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Hi, selamat pagiii</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">Gala bunga matahari</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li><div class="track-details"><a href="#">I'd like to watch you sleeping</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
       </ol>
     </section>
   </main>
