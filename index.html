@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MARKERS AND SUCH PENS FLASHDISKS — AO3 Edition</title>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(180deg, #f9fafc 0%, #fff 60%);
+      color: #111;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .album {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .album-header {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .album-cover {
+      width: 240px;
+      height: 240px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .album-cover:hover {
+      transform: scale(1.05);
+    }
+
+    .album-info h1 {
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .album-info h2 {
+      color: #e63946;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    .meta {
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 6px;
+    }
+
+    .desc {
+      margin-top: 10px;
+      color: #333;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #111;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    button.shuffle {
+      background-color: #e63946;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .tracklist ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tracklist li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 14px 0;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .tracklist li:hover {
+      background: #f2f2f2;
+      transform: scale(1.01);
+    }
+
+    .track-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .track-author {
+      color: #888;
+      font-size: 0.85rem;
+    }
+
+    .tracklist span {
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #e63946;
+    }
+
+    @media (max-width: 600px) {
+      .album-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .album-cover {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="album">
+    <section class="album-header">
+      <img src="https://images.genius.com/42566edad00ee3c76f433ea5634bbd0a.1000x1000x1.png" alt="Album cover" class="album-cover"/>
+      <div class="album-info">
+        <h1>MARKERS AND SUCH PENS FLASHDISKS</h1>
+        <h2>Sal Priadi</h2>
+        <p class="meta">AO3 · 2024 · <span>Collection</span></p>
+        <p class="desc">Each fic mirrors a track — words replace minutes, authors replace composers.</p>
+        <div class="buttons">
+          <button class="play">Read</button>
+          <button class="shuffle">Open Album</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="tracklist">
+      <ol>
+        <li><div class="track-details"><a href="#">Kita usahakan rumah itu</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Mesra-mesraannya kecil-kecilan dulu</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Lewat sudah pukul dua, makin banyak bicara kita</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Dari planet lain</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Yasudah</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Episode</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Foto kita blur</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Semua lagu cinta</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Di mana alamatmu sekarang</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="https://archiveofourown.org/works/72100281" target="_blank">Ada titik-titik di ujung doa</a><span class="track-author">by Cupsociety</span></div><span>10,000 words</span></li>
+        <li><div class="track-details"><a href="#">Biar jadi urusanku</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Zuzuzaza</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Hi, selamat pagiii</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">Gala bunga matahari</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+        <li><div class="track-details"><a href="#">I'd like to watch you sleeping</a><span class="track-author">coming soon</span></div><span>0 words</span></li>
+      </ol>
+    </section>
+  </main>
+<script>
+  document.querySelector('.shuffle').addEventListener('click', () => {
+    window.open('https://open.spotify.com/intl-id/album/5uAcLj2EJLtQtKMyDYCI0Q', '_blank');
+  });
+</script>
+</body>
+</html>
