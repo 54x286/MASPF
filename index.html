@@ -43,129 +43,38 @@
       transition: transform 0.6s ease;
     }
 
-    .album-cover:hover {
-      transform: scale(1.05);
-    }
+    .album-cover:hover { transform: scale(1.05); }
 
-    .album-info h1 {
-      font-size: 2rem;
-      margin: 0;
-      font-weight: 700;
-    }
+    .album-info h1 { font-size: 2rem; margin: 0; font-weight: 700; }
+    .album-info h2 { color: #e63946; margin-top: 6px; font-weight: 600; }
+    .meta { color: #777; font-size: 0.9rem; margin-top: 6px; }
+    .desc { margin-top: 10px; color: #333; line-height: 1.5; font-size: 0.95rem; }
 
-    .album-info h2 {
-      color: #e63946;
-      margin-top: 6px;
-      font-weight: 600;
-    }
+    .buttons { margin-top: 20px; }
+    button { background-color: #111; color: #fff; border: none; padding: 10px 18px; border-radius: 30px; cursor: pointer; margin-right: 10px; font-weight: 600; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    button.shuffle { background-color: #e63946; }
+    button:hover { transform: scale(1.08); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
 
-    .meta {
-      color: #777;
-      font-size: 0.9rem;
-      margin-top: 6px;
-    }
+    .tracklist ol { list-style: none; padding: 0; margin: 0; }
+    .tracklist li { border-bottom: 1px solid #eee; padding: 14px 0; transition: background 0.3s, transform 0.2s; display: flex; justify-content: space-between; align-items: flex-start; }
+    .tracklist li:hover { background: #f2f2f2; transform: scale(1.01); }
 
-    .desc {
-      margin-top: 10px;
-      color: #333;
-      line-height: 1.5;
-      font-size: 0.95rem;
-    }
+    .track-details { display: flex; flex-direction: column; }
+    .track-author { color: #888; font-size: 0.85rem; }
 
-    .buttons {
-      margin-top: 20px;
-    }
+    .track-meta { display: flex; flex-direction: column; align-items: flex-end; }
+    .track-words { font-size: 0.9rem; color: #444; }
+    .track-words a { color: inherit; text-decoration: underline; }
+    .track-words a:hover { color: #e63946; }
 
-    button {
-      background-color: #111;
-      color: #fff;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 30px;
-      cursor: pointer;
-      margin-right: 10px;
-      font-weight: 600;
-      transition: 0.3s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+    .track-pairing { color: #ff7aa2; font-size: 0.85rem; font-weight: 500; margin-top: 4px; }
 
-    button.shuffle {
-      background-color: #e63946;
-    }
-
-    button:hover {
-      transform: scale(1.08);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .tracklist ol {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .tracklist li {
-      border-bottom: 1px solid #eee;
-      padding: 14px 0;
-      transition: background 0.3s, transform 0.2s;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .tracklist li:hover {
-      background: #f2f2f2;
-      transform: scale(1.01);
-    }
-
-    .track-details {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .track-author {
-      color: #888;
-      font-size: 0.85rem;
-    }
-
-    .track-meta {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    .track-words {
-      font-size: 0.9rem;
-      color: #444;
-    }
-
-    .track-pairing {
-      color: #ff7aa2;
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-top: 4px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #111;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #e63946;
-    }
+    a { text-decoration: none; color: #111; font-weight: 500; transition: color 0.3s; }
+    a:hover { color: #e63946; }
 
     @media (max-width: 600px) {
-      .album-header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .album-cover {
-        width: 180px;
-        height: 180px;
-      }
+      .album-header { flex-direction: column; text-align: center; }
+      .album-cover { width: 180px; height: 180px; }
     }
   </style>
 </head>
@@ -176,8 +85,8 @@
       <div class="album-info">
         <h1>MARKERS AND SUCH PENS FLASHDISKS</h1>
         <h2>Sal Priadi</h2>
-        <p class="meta">AO3 · 2024 · <span>Collection</span></p>
-        <p class="desc">Each fic mirrors a track — words replace minutes, authors replace composers.</p>
+        <p class="meta">AO3 · 2025 · <span>Cinta universe collection</span></p>
+        <p class="desc">Each fic mirrors a track from this album, my goal is to completed it as an album fic.</p>
         <div class="buttons">
           <button class="play">Read</button>
           <button class="shuffle">Open Album</button>
@@ -187,52 +96,95 @@
 
     <section class="tracklist">
       <ol>
-        <li><div class="track-details"><a href="#">Kita usahakan rumah itu</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">Mesra-mesraannya kecil-kecilan dulu</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">Lewat sudah pukul dua, makin banyak bicara kita</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">Dari planet lain</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">Yasudah</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">Episode</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">Foto kita blur</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li>
+        <!-- Title opens Spotify if data-song exists; words link to fic when available -->
+        <li data-song="https://open.spotify.com/intl-id/track/1x9jnpPOAMSrr7DuIG5jMl?si=1a50d6eb9e1b42fc">
+          <div class="track-details"><span>Kita usahakan rumah itu</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/3TW8XLF8PyA3kFsV1l5713?si=87a2db77207445fc">
+          <div class="track-details"><span>Mesra-mesraannya kecil-kecilan dulu</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/5ny9oRP16qNgiOBxga2Dfv?si=17c66247321e47b0">
+          <div class="track-details"><span>Lewat sudah pukul dua, makin banyak bicara kita</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/71ZLnmvl1AUO0gqWvhPBw2?si=486bcf80341f4fd7">
+          <div class="track-details"><span>Dari planet lain</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/3qhj6auEMIDhJv6oCHI9fJ?si=6c7dcdee9f5748c7">
+          <div class="track-details"><span>Yasudah</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/2a6wNAPFnEHT1sHDZh5p3B?si=4a420b44aa4b466e">
+          <div class="track-details"><span>Episode</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/5POrnkQAprvkordH0kB25O?si=e79c945a9e834382">
+          <div class="track-details"><span>Foto kita blur</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/4s8W4gutSQnFIDNThqUPSI?si=b2aa3c2744ff46f5">
           <div class="track-details">
-            <a href="https://x.com/54x286/status/1940441431270982024?s=46" target="_blank">Semua lagu cinta</a>
+            <span>Semua lagu cinta</span>
             <span class="track-author">by cinta</span>
           </div>
           <div class="track-meta">
-            <span class="track-words">1,000 words</span>
+            <span class="track-words"><a href="https://x.com/54x286/status/1940441431270982024?s=46" target="_blank" rel="noopener">1,000 words</a></span>
             <span class="track-pairing">yushi/riku</span>
           </div>
         </li>
-        <li><div class="track-details"><a href="#">Di mana alamatmu sekarang</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li>
+        <li data-song="https://open.spotify.com/intl-id/track/0ttFueUDx5ZcxlV0jHiDxB?si=388b7c032ac44882">
+          <div class="track-details"><span>Di mana alamatmu sekarang</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/1E7zLPDdqo0OvzVmGj5aoV?si=089141e8e8fb4ceb">
           <div class="track-details">
-            <a href="https://archiveofourown.org/works/72100281" target="_blank">Ada titik-titik di ujung doa</a>
+            <span>Ada titik-titik di ujung doa</span>
             <span class="track-author">by Cupsociety</span>
           </div>
           <div class="track-meta">
-            <span class="track-words">10,000 words</span>
+            <span class="track-words"><a href="https://archiveofourown.org/works/72100281" target="_blank" rel="noopener">10,000 words</a></span>
             <span class="track-pairing">riku/yushi</span>
           </div>
         </li>
-        <li><div class="track-details"><a href="#">Biar jadi urusanku</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">Zuzuzaza</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">Hi, selamat pagiii</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">Gala bunga matahari</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
-        <li><div class="track-details"><a href="#">I'd like to watch you sleeping</a><span class="track-author">coming soon</span></div><div class="track-meta"><span class="track-words">0 words</span></div></li>
+        <li data-song="https://open.spotify.com/intl-id/track/3f3jS09mFLkbtLc1rWPZqL?si=e348e17e3db24534">
+          <div class="track-details"><span>Biar jadi urusanku</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/3KUks16xYXUuhpp0rhEsSl?si=bba61b07f6804b38">
+          <div class="track-details"><span>Zuzuzaza</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/5WrVgPYXJlIHSf177rDpNL?si=ba4acdf82d4942cf">
+          <div class="track-details"><span>Hi, selamat pagiii</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/5eBk8ZXcd0pb0AO4a5PpOg?si=64403153cbcd4691">
+          <div class="track-details"><span>Gala bunga matahari</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
+        <li data-song="https://open.spotify.com/intl-id/track/0Y7dCFSIdB9vJ8nnVIAfuv?si=16f58b18402148cf">
+          <div class="track-details"><span>I'd like to watch you sleeping</span><span class="track-author">coming soon</span></div>
+          <div class="track-meta"><span class="track-words">0 words</span></div>
+        </li>
       </ol>
     </section>
   </main>
 <script>
+  // Header buttons
   document.querySelector('.shuffle').addEventListener('click', () => {
     window.open('https://open.spotify.com/intl-id/album/5uAcLj2EJLtQtKMyDYCI0Q', '_blank');
   });
+
+  // Clicking a track row opens the song (Spotify) if data-song is present
   document.querySelectorAll('.tracklist li').forEach(track => {
-    const wordsText = track.querySelector('.track-words');
-    const words = wordsText ? parseInt(wordsText.textContent) : 0;
-    const songLink = track.querySelector('a')?.href;
-    if (words > 0 && songLink && songLink !== '#') {
-      track.addEventListener('click', () => {
+    const songLink = track.dataset.song;
+    if (songLink) {
+      track.addEventListener('click', (e) => {
+        // Don't override clicks on inner links (like fic word links)
+        if (e.target.tagName.toLowerCase() === 'a') return;
         window.open(songLink, '_blank');
       });
       track.style.cursor = 'pointer';
