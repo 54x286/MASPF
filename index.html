@@ -176,8 +176,8 @@
       <div class="album-info">
         <h1>MARKERS AND SUCH PENS FLASHDISKS</h1>
         <h2>Sal Priadi</h2>
-        <p class="meta">AO3 · 2025 · <span>Collection</span></p>
-        <p class="desc">Each fic mirrors a track from this album, my goal is to completed it as an album fic.</p>
+        <p class="meta">AO3 · 2024 · <span>Collection</span></p>
+        <p class="desc">Each fic mirrors a track — words replace minutes, authors replace composers.</p>
         <div class="buttons">
           <button class="play">Read</button>
           <button class="shuffle">Open Album</button>
@@ -197,7 +197,7 @@
         <li>
           <div class="track-details">
             <a href="https://x.com/54x286/status/1940441431270982024?s=46" target="_blank">Semua lagu cinta</a>
-            <span class="track-author">by Cinta</span>
+            <span class="track-author">by cinta</span>
           </div>
           <div class="track-meta">
             <span class="track-words">1,000 words</span>
@@ -226,6 +226,17 @@
 <script>
   document.querySelector('.shuffle').addEventListener('click', () => {
     window.open('https://open.spotify.com/intl-id/album/5uAcLj2EJLtQtKMyDYCI0Q', '_blank');
+  });
+  document.querySelectorAll('.tracklist li').forEach(track => {
+    const wordsText = track.querySelector('.track-words');
+    const words = wordsText ? parseInt(wordsText.textContent) : 0;
+    const songLink = track.querySelector('a')?.href;
+    if (words > 0 && songLink && songLink !== '#') {
+      track.addEventListener('click', () => {
+        window.open(songLink, '_blank');
+      });
+      track.style.cursor = 'pointer';
+    }
   });
 </script>
 </body>
